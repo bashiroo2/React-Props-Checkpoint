@@ -1,0 +1,77 @@
+/* Set background image for the body */
+body {
+  background-image: url("https://images.alphacoders.com/510/510026.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* Styling for the container of player cards */
+.player-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px; /* Add a gap between player cards */
+  margin-top: 10%; /* Add margin from the top */
+}
+
+/* Styling for the flip box */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+
+/* Styling for the inner part of the flip box */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Rotate the flip box when hovered */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Styling for the front and back of the flip box */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Styling for the front side of the flip box */
+.flip-box-front {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Styling for the back side of the flip box */
+.flip-box-back {
+  background-color: #555;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* Styling for the player image */
+.player-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styling for the player card container */
+.player-card {
+  width: 100%;
+  height: 400px;
+  perspective: 1000px;
+}
